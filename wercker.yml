@@ -6,7 +6,7 @@ build:
         code: |
           sudo apt-get update
           sudo apt-get install -y python-pip
-          pip install -r requirements.txt
+          sudo pip install -r requirements.txt
     - script:
         name: bootstrap containers
         code: source run.sh
