@@ -18,7 +18,7 @@ r.db_create('python_tutorial').run(conn)
 
 print 'creating table'
 
-conn.db('python_tutorial').table_create('heroes').run()
+conn.db('python_tutorial').table_create('heroes').run(conn)
 
 print 'inserting heroes'
 r.db('python_tutorial').table('heroes').insert({
