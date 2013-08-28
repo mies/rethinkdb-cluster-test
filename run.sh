@@ -15,8 +15,10 @@ echo $SLAVE1_ID
 export SLAVE1_PORT=$(sudo docker port $SLAVE1_ID 28015)
 echo $SLAVE1_PORT
 export SLAVE1_IP=$(sudo docker inspect $SLAVE1_ID | grep IPAddress | cut -d '"' -f 4)
+echo $SLAVE1_IP
 echo "setting up second slave"
 export SLAVE2_ID=$(sudo docker run -p 49235:29015 -p 49236:28015 -d mies/rethink rethinkdb --join $MASTER_IP:$MASTER_CLUSTER_PORT --bind all)
 echo $SLAVE2_ID
 export SLAVE2_PORT=$(sudo docker port $SLAVE2_ID 28015)
 export SLAVE2_IP=$(sudo docker inspect $SLAVE2_ID | grep IPAddress | cut -d '"' -f 4)
+echo $SLAVE2_IP
