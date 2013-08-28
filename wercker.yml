@@ -8,6 +8,9 @@ build:
           sudo apt-get install -y python-pip
           sudo pip install -r requirements.txt
     - script:
+        name: build container
+        code: sudo docker build -t mies/rethink .
+    - script:
         name: bootstrap containers
         code: source run.sh
     - script:
