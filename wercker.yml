@@ -1,5 +1,5 @@
 box: wercker/bootstrap
-builds:
+build:
   steps:
     - script:
         name: pip install
