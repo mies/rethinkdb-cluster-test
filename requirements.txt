@@ -1,0 +1,4 @@
+distribute==0.6.34
+protobuf==2.5.0
+rethinkdb==1.8.0-0
+wsgiref==0.1.2

@@ -1,0 +1,13 @@
+box: wercker/bootstrap
+builds:
+  steps:
+    - script:
+        name: pip install
+        code: pip install -r requirements.txt
+    - script:
+        name: bootstrap containers
+        code: source run.sh
+    - script:
+        name: run python test
+        code: python test.py
+
