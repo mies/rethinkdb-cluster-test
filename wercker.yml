@@ -1,10 +1,12 @@
-box: wercker/bootstrap
+box: ami-fd511c94
+box-type: ami
 build:
   steps:
     - script:
         name: pip install
         code: |
           sudo apt-get update
+          sudo apt-get install linux-image-extra-`uname -r` -q
           sudo apt-get install -y python-pip
           sudo pip install -r requirements.txt
     - script:
